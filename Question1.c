@@ -1,18 +1,19 @@
 #include <stdio.h>
 int main() {
-    int arr[5] = {0};
-    int i= 0, j = 0, k=0, last= 0;
+    int arr[5];
+    int i, last;
     printf("Enter 5 integers: ");
-    for(i = 0; i < 5; i++ ){
-        scanf("%d\n", & arr[i]);
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
     }
     last = arr[4];
-    for(j=4; j > 0; j--){
-        arr[j] = arr[j-1];
+    for (i = 4; i > 0; i--) {
+        arr[i] = arr[i - 1];
     }
-    arr[0]= last;
-    for( k= 0; k < 5; k++){
-        printf("%d\n", arr[k]);
+    arr[0] = last;
+    printf("The resultant array: ");
+    for (i = 0; i < 5; i++) {
+        printf("%d ", arr[i]);
     }
     return 0;
 }
